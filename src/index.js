@@ -4,12 +4,7 @@ import fetchCountries from './js/fetchCountries';
 import countriesListItemsTemplate from './templates/country-template.hbs';
 import shortListItemsTemplate from './templates/short-list.hbs';
 //Pnotify starts
-import {
-  error,
-  alert,
-  defaults,
-  Stack
-} from '@pnotify/core';
+import { error, alert, defaults, Stack } from '@pnotify/core';
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
 //Pnotify ends
