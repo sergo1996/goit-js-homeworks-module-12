@@ -4,7 +4,12 @@ import fetchCountries from './js/fetchCountries';
 import countriesListItemsTemplate from './templates/country-template.hbs';
 import shortListItemsTemplate from './templates/short-list.hbs';
 //Pnotify starts
-import { error, alert, defaults, Stack } from '@pnotify/core';
+import {
+  error,
+  alert,
+  defaults,
+  Stack
+} from '@pnotify/core';
 import '@pnotify/core/dist/BrightTheme.css';
 import '@pnotify/core/dist/PNotify.css';
 //Pnotify ends
@@ -18,13 +23,13 @@ const refs = {
 
 refs.input.addEventListener(
   'input',
-  debounce(() => searchForCountry(), 500),
+  debounce(e => searchForCountry(e), 500),
 );
 
 //take data to fetch from input
-function searchForCountry() {
+function searchForCountry(e) {
   clearListItems();
-  const searchQuery = refs.input.value;
+  const searchQuery = e.target.value;
   fetchCountries(searchQuery, onData);
 }
 
